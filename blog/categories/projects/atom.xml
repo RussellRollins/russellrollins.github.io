@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Russell Rollins]]></title>
-  <link href="http://RussellRollins.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Projects | Russell Rollins]]></title>
+  <link href="http://RussellRollins.github.io/blog/categories/projects/atom.xml" rel="self"/>
   <link href="http://RussellRollins.github.io/"/>
   <updated>2014-07-22T22:25:44-04:00</updated>
   <id>http://RussellRollins.github.io/</id>
