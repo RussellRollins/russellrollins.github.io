@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacking | Russell Rollins]]></title>
   <link href="http://RussellRollins.github.io/blog/categories/hacking/atom.xml" rel="self"/>
   <link href="http://RussellRollins.github.io/"/>
-  <updated>2014-07-27T14:51:07-04:00</updated>
+  <updated>2014-07-27T15:07:39-04:00</updated>
   <id>http://RussellRollins.github.io/</id>
   <author>
     <name><![CDATA[Russell Rollins]]></name>
@@ -96,7 +96,7 @@
 
 <p>Overall, what can I take away from this? Don&#39;t expect your attacker to do things the hard way. This &quot;exploit&quot; on the lock is pointless, because 30 seconds with the shim (if you’re better at it than me) or 10 seconds with the bolt cutters works a whole lot better. Don&#39;t allow unrestricted physical access to any security system. This lock doesn&#39;t keep thieves out. It just makes thieves easy to spot. A good security system is one that makes bad actors easy to spot. One guy sitting in the locker trying thousands of lock combinations or working a lockpick would raise suspicions. I also saw that security is only as strong as the weakest link. This exploit makes a strong link weaker, but it would still be easier to go another way.</p>
 
-<h2>Conclusion</h2>
+<h3>Conclusion</h3>
 
 <p>I think I could build a machine that automates the cracking process. I also didn’t apply the theory that the lock combination is probably spread out. I’d also like to try and write a python script that prioritizes the “good” combinations. This was a fun exploration, but I don&#39;t know if I&#39;ll ever have much faith in combination locks again. </p>
 ]]></content>
