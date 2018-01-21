@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: 
-
-Sitemap: http://RussellRollins.github.io/sitemap.xml 
+Disallow:
