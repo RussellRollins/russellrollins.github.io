@@ -3,34 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://russellrollins.com/about/</loc>
+    <loc>https://blog.russellrollins.com/about/</loc>
     <lastmod>2018-01-21T12:49:18-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://russellrollins.com/authors/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://russellrollins.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://russellrollins.com/page/</loc>
+    <loc>https://blog.russellrollins.com/page/</loc>
     <lastmod>2018-01-21T12:49:18-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://russellrollins.com/</loc>
+    <loc>https://blog.russellrollins.com/</loc>
     <lastmod>2018-01-21T12:49:18-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://russellrollins.com/tags/</loc>
+    <loc>https://blog.russellrollins.com/authors/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.russellrollins.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.russellrollins.com/tags/</loc>
     <priority>0</priority>
   </url>
   
