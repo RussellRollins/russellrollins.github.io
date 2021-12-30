@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Russell Rollins</title>
+    <link>https://russellrollins.com/</link>
+    <description>Recent content on Russell Rollins</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://russellrollins.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://russellrollins.com/about/</link>
+      <pubDate>Thu, 30 Dec 2021 12:00:00 -0500</pubDate>
+      
+      <guid>https://russellrollins.com/about/</guid>
+      <description>Hello, you’ve found your way to my blog somehow or another. Glad to have yah.
+I’m a Lead Member of Technical Staff at Salesforce, working remotely from Atlanta, GA as a DevOps on the BREAD (Build Release Environments Automation &amp;amp; Deployment) Team. I write Go and Bash proficiently and I write Ruby, PHP, Java, and Javascript competently. But, like so many of us, I spend a lot of my time staring at YAML now instead.</description>
+    </item>
+    
+  </channel>
+</rss>
