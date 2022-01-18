@@ -2,10 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://russellrollins.com/</loc>
+    <lastmod>2022-01-18T16:07:00-05:00</lastmod>
+  </url><url>
+    <loc>https://russellrollins.com/blog/</loc>
+    <lastmod>2022-01-18T16:07:00-05:00</lastmod>
+  </url><url>
+    <loc>https://russellrollins.com/blog/twitter/</loc>
+    <lastmod>2022-01-18T16:07:00-05:00</lastmod>
+  </url><url>
     <loc>https://russellrollins.com/about/</loc>
     <lastmod>2021-12-30T12:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://russellrollins.com/</loc>
   </url><url>
     <loc>https://russellrollins.com/categories/</loc>
   </url><url>
