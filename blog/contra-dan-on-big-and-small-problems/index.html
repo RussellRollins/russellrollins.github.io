@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Contra Dan on Big and Small Problems | Russell Rollins</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contra Dan on Big and Small Problems" />
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:site" content="https://twitter.com/Russell_Rollins" />
+  <meta name="twitter:creator" content="https://twitter.com/Russell_Rollins" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.86d1effd4c412b85ac13db53a90c473a0f256f789b821e131125c9aa25cb6a6d.css" integrity="sha256-htHv/UxBK4WsE9tTqQxHOg8lb3ibgh4TESXJqiXLam0="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.744ffb157ee70608692600e81f2369bf711f034d67c11157144b8f8df9099206.css" integrity="sha256-dE/7FX7nBghpJgDoHyNpv3EfA01nwRFXFEuPjfkJkgY="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/russellrollins.com\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Contra Dan on Big and Small Problems",
+      "headline" : "Contra Dan on Big and Small Problems",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2022",
+      "datePublished": "2022-02-04 08:45:00 -0500 EST",
+      "dateModified" : "2022-02-04 08:45:00 -0500 EST",
+      "url" : "https:\/\/russellrollins.com\/blog\/contra-dan-on-big-and-small-problems\/",
+      "wordCount" : "1226",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/about">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Contra Dan on Big and Small Problems</h1>
+            <time datetime="2022-02-04 08:45:00 -0500 EST" class="post__date">Feb 4 2022</time> 
+          </header>
+          <article class="post__content">
+              
+<h2 id="contra-dan-on-big-and-small-problems">Contra Dan on Big and Small Problems<a class="anchor" href="#contra-dan-on-big-and-small-problems">#</a></h2>
+<p>My former coworker at HashiCorp, Dan Slimmon recently wrote a blog post titled
+<a href="https://blog.danslimmon.com/2022/02/03/big-problems-and-small-problems-under-load/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>Big Problems and Small Problems under load</a>.</p>
+<p>I think it&rsquo;s a great post that gets at the heart of a common problem in big
+SaaS applications, that most serious investigation and debugging of systemic
+problems only happens when we&rsquo;re doing root cause analysis on a Big Problem.</p>
+<p>While this post is called &ldquo;Contra Dan&rdquo;, that&rsquo;s mostly because, &ldquo;Dan is right
+about everything he said, but failed to mention a caveat I think is so
+important it puts his whole thesis at risk&rdquo; is not a pithy title for a blog
+post. Another important disclaimer is that Dan is a much more experienced and
+expert SRE than I am. I&rsquo;ve never actually held SRE as a job title, although I
+have worked alongside people who hold that title in debugging and hardening complex systems.
+Still, you should take all this with a grain of salt, to the extent we
+disagree, Dan is probably in the right.</p>
+<h2 id="thesis">Thesis<a class="anchor" href="#thesis">#</a></h2>
+<p>You should, of course, read the original source material, it&rsquo;s short and
+quite good. But to summarize quickly, Dan says we should try to identify Small
+Problems before they turn into Big Problems.</p>
+<p>Dan:</p>
+<blockquote>
+<p>But [backchaining from Big Problems] is not the only way to identify Small
+Problems. We can go digging in our data and find them, endeavoring to solve
+them before they get a chance to cause a Big Problem.</p>
+</blockquote>
+<p>Small Problems are easier to solve, since they have a small number of causes and a
+small number of effects. In addition, Big Problems are <strong>expensive</strong>:</p>
+<blockquote>
+<p>But even if we’re just poking around in the dark, we’ll probably end up
+preventing some Big Problems, right? And Big Problems are expensive. I think,
+on balance, it’s worth the effort.</p>
+</blockquote>
+<p>Big Problems are expensive because they end up affecting customers. They count
+against our error budget and against our SLAs. But they&rsquo;re also expensive
+because they involve bringing the blunt instrument of incident response to
+bear. Incident response involves process, external interfaces, and high bandwidth
+synchronous communications. This is for a good reason! But it&rsquo;s also expensive.</p>
+<p>In the classic video game Half-Life, Gordon Freeman spends a lot of the time
+he&rsquo;d like to spend fixing problems bonking assorted ne&rsquo;er-do-wells with a
+crowbar. If you had solved the problem with the crystal on that silly little
+cart before the resonance cascade you could have solved it in a quiet lab
+without bonking anything. In this strained analogy, doing customer comms and
+updating the status page is that level where you burn the big tentacle monster
+with a rocket engine. Half-Life is weird. Solving Small Problems means we can
+pick them out in isolation, without the additional incidence of stress caused
+by an outage. This is a very good thing.</p>
+<h2 id="antithesis">Antithesis<a class="anchor" href="#antithesis">#</a></h2>
+<p>So, why do I think Dan is missing something important? He talks about how
+Big Problems are the result of complex emergent behavior of a system and
+involve cascading failures of many Small Problems. Dan again:</p>
+<blockquote>
+<p>Big Problems, though, are always composed of smaller problems. Big Problems
+conditioned by load are not atomic novel phenomena. There’s a knot of
+interdependent processes, and when this knot gets pulled tight by load, it
+binds up.</p>
+</blockquote>
+<p>A complex system is one where many of the effects are also causes. Where there
+are not only long chains of dependencies, but sometimes those chains loop back
+on themselves. The output of a component is, after some number of hops, also an
+input to the same component.</p>
+<p>The crucial distinction I think it is important to draw is between (terms I&rsquo;m
+going to make up now) <strong>Primary</strong> Effects and <strong>Intermediate</strong> Effects. Primary
+Effects are, as Dan puts where &ldquo;value comes out&rdquo; of the system. If you run a widget
+factory, the Primary Effect is making widgets. If you run a SaaS product, the
+Primary Effect is serving customer API requests, responding to customer web
+traffic, and background jobs syncing customer data. A decent heuristic: if you
+can put the word customer in there, it&rsquo;s a Primary Effect. Intermediate Effects
+are all the things you wouldn&rsquo;t draw on a UML diagram of your system. Linux
+swapping pages to disk is an Intermediate Effect. Your SQL database row locking
+or doing table scans is an Intermediate Effect. Intermediate Effects can
+eventually cause Primary Effects and this often happens during the midst of a
+Big Problem.</p>
+<p>The problem with Intermediate Effects is it&rsquo;s too easy to become fixated on
+them, especially if they are easier to measure than their associate Primary
+Effects. There is some corollary of <a href="https://en.wikipedia.org/wiki/Goodhart%27s_law" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>Goodhart&rsquo;s Law</a>
+in which you tend to produce a lot of things that you measure and &ldquo;score&rdquo; on. Your goal
+was to live the good life, you know material security is part of that, but it&rsquo;s
+easy to measure your salary and hard to measure your satisfaction. After a
+while you find your value function has gotten all out of whack. James C. Scott
+would say something about <a href="https://theanarchistlibrary.org/library/james-c-scott-seeing-like-a-state" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>legibility</a>
+here.</p>
+<p>Beware any scientific study that bases itself on Intermediate Effects. If the
+claim is measuring thought or belief, but the actual study is analyzing fMRI
+images you can almost always discount the value to zero. If a drug is claimed
+to be effective for Alzheimer&rsquo;s and you find out it actually just reduces
+amyloid plaques, your skepticism should be on alert.</p>
+<p>The same goes for debugging. If you find yourself working on a lot of
+Intermediate Effects, not only are you likely to waste time fixing things that
+don&rsquo;t matter, you&rsquo;re also likely to miss useful solutions to Primary Effects.
+If you find a slow query, you might spent time optimizing it. Or you might ask
+yourself what part of the system uses it, how, and take an alternative approach
+like an in-memory cache. Ask what the Primary Effect you&rsquo;re worried about is,
+measure it, and try to solve it. If your approach to Small Problems is to pick
+off a lot of negative Intermediate Effects, you&rsquo;re probably not optimizing
+properly.</p>
+<h2 id="synthesis">Synthesis<a class="anchor" href="#synthesis">#</a></h2>
+<p>Dan concludes:</p>
+<blockquote>
+<p>Ideally, nearly everybody in the org ought to be spending some of their time
+investigating mysteries. It ought to be an explicit part of the job.</p>
+</blockquote>
+<p>On this, I completely agree. A refusal to dig into thorny problems, hiding
+them behind an <a href="https://www.lesswrong.com/posts/EFQ3F6kmt4WHXRqik/ugh-fields" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>Ugh Field</a>
+and waiting for them to become overwhelming is a common failure mode. Management
+often contributes to this, prioritizing features and legible changes over the
+often slow and sometimes invisible work of fixing Small Problems.</p>
+<p>Dan is, in my experience, extremely good at this. Noticing a Small Problem,
+starting a <a href="https://en.wikipedia.org/wiki/Differential_diagnosis" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>differential diagnosis</a>
+document, and working through the leads or bringing in subject matter experts
+until the problem is wrapped up. I think Dan applies some internal version of
+the Intermediate/Primary Effects heuristic, which is why he doesn&rsquo;t tend to
+spin his wheels fixing Small Problems that don&rsquo;t matter.</p>
+<p>I think for most of us, making that distinction clear is valuable. It helps you
+solve the right problems and it helps you sell the work as valuable up the
+chain. It&rsquo;s hard to convince someone query optimization was a good use of time,
+it&rsquo;s easy to convince them improving API response times for valuable customers
+is.</p>
+<p>Solve Small Problems, but only Small Problems with Primary Effects.</p>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://russellrollins.com/blog/not-for-profit/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">Not for Profit</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a
+        class="social-icons__link"
+        title="Twitter"
+        href="https://twitter.com/Russell_Rollins"
+        target="_blank"
+        rel="me noopener"
+      >
+        <div class="social-icons__icon" style="background-image: url('https://russellrollins.com/svg/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a
+        class="social-icons__link"
+        title="GitHub"
+        href="https://github.com/russellrollins"
+        target="_blank"
+        rel="me noopener"
+      >
+        <div class="social-icons__icon" style="background-image: url('https://russellrollins.com/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a
+        class="social-icons__link"
+        title="Email"
+        href="mailto:russell@russellrollins.com"
+        target="_blank"
+        rel="me noopener"
+      >
+        <div class="social-icons__icon" style="background-image: url('https://russellrollins.com/svg/email.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a
+        class="social-icons__link"
+        title="LinkedIn"
+        href="https://www.linkedin.com/in/russellrollins/"
+        target="_blank"
+        rel="me noopener"
+      >
+        <div class="social-icons__icon" style="background-image: url('https://russellrollins.com/svg/linkedin.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p></p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.575dda8d49ee02639942c63564273e6da972ab531dda26a08800bdcb477cbd7f.js" integrity="sha256-V13ajUnuAmOZQsY1ZCc&#43;balyq1Md2iagiAC9y0d8vX8=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>

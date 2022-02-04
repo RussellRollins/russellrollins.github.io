@@ -6,7 +6,18 @@
     <description>Recent content in Blogs on Russell Rollins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jan 2022 19:30:00 -0500</lastBuildDate><atom:link href="https://russellrollins.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Feb 2022 08:45:00 -0500</lastBuildDate><atom:link href="https://russellrollins.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contra Dan on Big and Small Problems</title>
+      <link>https://russellrollins.com/blog/contra-dan-on-big-and-small-problems/</link>
+      <pubDate>Fri, 04 Feb 2022 08:45:00 -0500</pubDate>
+      
+      <guid>https://russellrollins.com/blog/contra-dan-on-big-and-small-problems/</guid>
+      <description>Contra Dan on Big and Small Problems My former coworker at HashiCorp, Dan Slimmon recently wrote a blog post titled Big Problems and Small Problems under load.
+I think it&amp;rsquo;s a great post that gets at the heart of a common problem in big SaaS applications, that most serious investigation and debugging of systemic problems only happens when we&amp;rsquo;re doing root cause analysis on a Big Problem.
+While this post is called &amp;ldquo;Contra Dan&amp;rdquo;, that&amp;rsquo;s mostly because, &amp;ldquo;Dan is right about everything he said, but failed to mention a caveat I think is so important it puts his whole thesis at risk&amp;rdquo; is not a pithy title for a blog post.</description>
+    </item>
+    
     <item>
       <title>Not for Profit</title>
       <link>https://russellrollins.com/blog/not-for-profit/</link>
